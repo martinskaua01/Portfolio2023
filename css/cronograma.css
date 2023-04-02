@@ -1,0 +1,184 @@
+
+.cronograma {
+	padding-top: 1rem;
+    margin-top: 4rem;
+}
+
+.cronograma h1 {
+	font-size: 7rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+.slide-container {
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+    transform: scale(0.9);
+    margin-top: -4.5rem;
+}
+
+.image-slider {
+	width: 100%;
+	height: 600px;
+	position: absolute;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .7s;
+}
+
+.slides-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 30px;
+}
+
+#slide-1, #slide-2, #slide-3{
+    position: relative;
+}
+
+.img {
+	position: relative;
+	width: 240px;
+	height: 370px;
+	transition: .5s;
+	filter: saturate(10%);
+}
+
+.slides-div input {
+	display: none;
+}
+
+.label {
+	position: absolute;
+	width: 240px;
+	height: 370px;
+	transition: .5s;
+	border-radius: 20px;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.label:hover {
+	background-color: rgba(255, 255, 255, 0.081);
+	cursor: pointer;
+    transform: scale(1.1);
+}
+
+#label-1,
+#img1 {
+	transform: rotate(-5deg);
+	margin-top: 2rem;
+    transition: .5s;
+}
+
+#label-2,
+#img2 {
+	transform: rotate(0deg);
+    margin-top: 0;
+}
+
+#label-3,
+#img3 {
+	transform: rotate(5deg);
+	margin-top: 2rem;
+}
+
+#button-1:not(:checked)+.img,
+#button-2:not(:checked)+.img,
+#button-3:not(:checked)+.img {
+	width: 240px;
+	height: 370px;
+	transform: none;
+	filter: saturate(10%);
+}
+
+#button-1:checked~#img1,
+#button-1:checked~.label {
+	width: 240px;
+	height: 370px;
+	background-color: transparent;
+	transform: rotate(0deg);
+	filter: saturate(100%);
+}
+
+#button-1:checked + label:before, #button-1:checked + label:after,
+#button-2:checked + label:before, #button-2:checked + label:after,
+#button-3:checked + label:before, #button-3:checked + label:after{
+    display: inline-block;
+    position: absolute;
+    color: #f1f1f1;
+    font-size: 2.5rem;
+    transition: .5s;
+    font-weight: 200;
+}
+
+#button-1:checked + label:before {
+    content: "Manhã";
+    left: 25%;
+    top: -5rem;
+}
+
+#button-1:checked + label:after {
+    content: "Estudos";
+    left: 16%;
+    bottom: -5rem;
+}
+
+#button-2:checked + label:before {
+    content: "Tarde";
+    left: 25%;
+    top: -5rem;
+}
+
+#button-2:checked + label:after {
+    content: "Trabalho";
+    left: 16%;
+    bottom: -5rem;
+}
+#button-3:checked + label:before {
+    content: "Noite";
+    left: 25%;
+    top: -5rem;
+}
+
+#button-3:checked + label:after {
+    content: "Descanso";
+    left: 16%;
+    bottom: -5rem;
+}
+
+#button-1:checked~#img1,
+#button-1:checked~.label {
+	width: 240px;
+	height: 370px;
+	background-color: transparent;
+	transform: rotate(0deg) scale(1.1);
+	filter: saturate(100%);
+}
+
+
+#button-2:checked~#img2,
+#button-2:checked~.label {
+	width: 240px;
+	height: 370px;
+	background-color: transparent;
+	transform: scale(1.1);
+	filter: saturate(100%);
+
+}
+
+#button-3:checked~#img3,
+#button-3:checked~.label {
+	width: 240px;
+	height: 370px;
+	background-color: transparent;
+	transform: rotate(0deg) scale(1.1);
+	filter: saturate(100%);
+}
