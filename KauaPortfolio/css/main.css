@@ -1,0 +1,47 @@
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem 0 5rem 0
+}
+
+.maintxt{
+    display: block;
+}
+
+.main1stChild{
+    margin-left: 12rem;
+    display: grid;
+    align-content: center;
+
+}
+
+.main1stChild h1{
+    font-size: 6rem;
+}
+
+.main1stChild h1::after{
+    content: "";
+    position: absolute;
+    background-color: #f1f1f1;
+    height: 2px;
+    width: 120%;
+    left: 5px;
+    bottom: 0rem;
+}
+
+.main1stChild h2{
+    font-size: 2.5rem;
+    font-weight: 200;
+    position: relative;
+    margin-bottom: -20px;
+    margin-left: 5px;
+}
+
+
+
+.main1stChild h3{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 1rem;
+    margin-left: 5px;
+}

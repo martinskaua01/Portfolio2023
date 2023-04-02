@@ -1,0 +1,37 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 2rem;
+}
+
+li a{
+    padding: 0.5rem 0.2rem;
+    margin: 0px 3rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: .25s;
+    position: relative;
+}
+
+li a:after{
+    content: "";
+    position: absolute;
+    background-color: #449DDF;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: 0.2rem;
+    transition: .5s;
+}
+
+li a:hover{
+    transform: scale(1.1);
+}
+
+li a:hover::after{
+    width: 100%;
+}
+
+
