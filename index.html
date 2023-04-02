@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio 2023</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="#quemSou">Quem sou</a>
+                <a href="#cronograma">Cronograma</a>
+                <a href="#portfolios">Portfólios</a>
+                <a href="#disciplinas">Discipilinas</a>
+                <a href="#projetos">Projetos</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="main">
+        <div class="main1stChild">
+            <h2 class="maintxt">2023</h2>
+            <h1 class="maintxt">Portfólio</h1>
+            <h3 class="maintxt">Kauã Henrique Martins - 3A</h3>
+        </div>
+        <div class="mainLstChild">
+            <img src="../img/KauaFoto1.png">
+        </div>
+    </section>
+    <section class="quemsou" id="quemSou">
+        <div class="quemsouGrid">
+            <div class="quemsou1stChild">
+                <h1>Quem <br> Eu Sou</h1>
+
+                
+                <div class="quemsouTexto">
+                    <input id="ch" type="checkbox">
+                    <p> Meu nome é Kauã Henrique Martins, tenho 17 anos, sou estudante da escola-S, quero trabalhar na área de programação 
+                    por isso escolhi cursar o ensino médio no SENAI</p>
+                    <label for="ch" class="lerMais">Ler mais...</label>
+
+                    <div class="conteudoExtra">
+                        <p>Tenho outros projetos de vida como trabalhar na vida pública. Minha matéria preferida é Humanas,  porque gosto de Geografia e história e tenho facilidade para memorizar fatos históricos. Curto sair com meus amigos, jogar bola, ver o pôr do sol na praia, gosto de ler livros de projeção de futuro, empreendedorismo e de como chegar no primeiro milhão. Busco sempre me divertir no que eu faço pois acho que me divertindo eu me concentro melhor, Gosto de aprender coisas novas e mudar ideias.</p>
+                        <label for="ch" class="lerMais">Ler menos...</label>
+                        <img class = "curriculo" src="../img/CurriculoKaua.png">
+                    </div>
+                </div>
+                <div class="socialMedia">
+                    <img class="icon" src="../img/github.svg" alt="GitHub" href="https://github.com/martinskaua01">
+                    <img class="icon" src="../img/instagram.svg" alt="Instagram">
+                    <img class="icon" src="../img/linkedln.svg" alt="Linkedln">
+                    <img class="icon" src="../img/twitter.svg" alt="Twitter">
+                    <img class="icon" src="../img/zap.svg" alt="Whatsapp">
+                </div>
+
+            </div>
+
+            
+
+            <div class="quemsouImg">
+                <img src="../img/KauaImg2.png">
+            </div>
+        </div>
+    </section>
+    
+    <section class="cronograma" id="cronograma">
+        <h1 id="Cronograma">Cronograma</h1>
+
+        <div class="slide-container">
+            <span class="slider-span" id="slider-span1"></span>
+            <span class="slider-span" id="slider-span2"></span>
+            <span class="slider-span" id="slider-span3"></span>
+
+            <div class="image-slider" id="image-slider">
+                <div class="slides-div" id="slide-1">
+                    <input type="radio" name="slide" id="button-1" class="button">
+                    <label for="button-1" class="label" id="label-1"></label>
+                    <img src="../img/Manha.png" alt="Manhã" class="img" id="img1">
+
+                </div>
+                <div class="slides-div" id="slide-2">
+                    <input type="radio" name="slide" id="button-2" class="button">
+                    <label for="button-2" class="label" id="label-2"></label>
+                    <img src="../img/Tarde.png" alt="Tarde" class="img" id="img2">
+                        
+                </div>
+                <div class="slides-div" id="slide-3">
+                    <input type="radio" name="slide" id="button-3" class="button">
+                    <label for="button-3" class="label" id="label-3"></label>
+                    <img src="../img/Noite.png" alt="Noite" class="img" id="img3">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolios" id="portfolios">
+        <h1>Portfólios</h1>
+        <div class="portfolioGrid">
+            <div>
+                <a class="link" href="https://drive.google.com/drive/folders/1GxyARC3_U2sb4lgjsf9datbTA8DB6SBO" target="_blank">
+                    <div>
+                        <img src="../img/Portfolio2022.png">
+                        <p>Portfolio 2022</p>
+                    </div>
+                </a>
+            </div>
+            
+
+            
+            <div>
+                <a class="link" href="https://docs.google.com/presentation/d/1bLD7nfs138NR61DMc2zy5FeIPu4ZyVHvV2aBEznlRhM/edit#slide=id.geb17d949d1_0_53" target="_blank">
+                    <div>
+                        <img src="../img/Portfolio2021.png">
+                        <p>Portfolio 2021</p>
+                    </div>
+                </a>
+            </div>
+            
+            
+        </div>
+    </section>
+
+</body>
+</html>
+<script>
+    const checkboxes = document.getElementsByClassName('button');
+
+document.addEventListener('click', function(event) {
+  for (let i = 0; i < checkboxes.length; i++) {
+    if (event.target !== checkboxes[i] && !checkboxes[i].contains(event.target)) {
+      checkboxes[i].checked = false;
+    }
+  }
+});
+
+
+const checkbox = document.getElementById('ch');
+const quemsouImg = document.querySelector('.quemsouImg img');
+
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    quemsouImg.style.display = 'none';
+  } else {
+    quemsouImg.style.display = 'block';
+  }
+});
+</script>
